@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+:root {
+    --image: url(../photos/photo.avif);
+    --background-color: #1F2937;
+    --heading-color: #FFFFFF;
+    --bio-color: #D5D4D8;
+    --btn-color: #111;
+    --line-color: #2F3E53;
+}
+
+
+/* light-theme */
+
+.light_theme {
+    --image: url(../photos/dark-image.avif);
+    --background-color: #F0F9FF;
+    --heading-color: #1F2937;
+    --bio-color: #2F3E53;
+    --btn-color: #F0F9FF;
+    --line-color: #D5D4D8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: var(--image);
+    background-size: cover;
+}
+
+.card {
+    --width: 560px;
+    position: relative;
+    width: var(--width);
+    height: 550px;
+    left: calc(50% - var(--width) / 2);
+    top: 90px;
+    background: var(--background-color);
+    font-family: 'Karla';
+    border-radius: 10px;
+}
+
+.heading {
+    position: absolute;
+    width: 354px;
+    height: 80px;
+    left: 52px;
+    top: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    color: var(--heading-color);
+}
+
+.second {
+    color: #0EA5E9;
+}
+
+.bio {
+    position: absolute;
+    width: 372px;
+    height: 28px;
+    left: 52px;
+    top: 140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--bio-color);
+}
+
+.geneBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 17px 9px 15px;
+    gap: 12px;
+    position: absolute;
+    width: 250px;
+    height: 45px;
+    left: 52px;
+    top: 230px;
+    background: #0EA5E9;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: none;
+    color: var(--btn-color);
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    width: 500px;
+    height: 0px;
+    left: 25px;
+    top: 68%;
+    border: 1px solid var(--line-color);
+}
+
+.firstPass,
+.secPass {
+    position: absolute;
+    top: 75%;
+}
+
+.firstPass {
+    left: 25px;
+}
+
+.secPass {
+    left: 295px;
+}
+
+#textOne,
+#textTwo {
+    background: #374151;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    width: 230px;
+    height: 40px;
+    text-align: center;
+    color: #0EA5E9;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    overflow: hidden;
+    overflow-y: none;
+    resize: none;
+}
+
+.copyBtn {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    top: 260px;
+    right: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.secCopyBtn {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    top: 260px;
+    right: 180px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.sign {
+    transition: opacity .5s ease-in-out;
+}
+
+.sign {
+    opacity: 0;
+    position: absolute;
+    top: calc(100% - 60px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--heading-color);
+    border-radius: 10px;
+    padding: 5px;
+    width: 60px;
+    font-size: 15px;
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    width: 40px;
+    height: 14px;
+    background-color: var(--background-color);
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+    border: 1px solid #0C4A6E;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bio-color);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(26px);
+}
+
+.trick {
+    opacity: 0;
+}
+
+.capital,
+.number,
+.character {
+    width: 60px;
+    height: 40px;
+    background-color: #6B7280;
+    color: var(--background-color);
+    position: absolute;
+    top: 300px;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: 'Inter';
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+}
+
+.capital:hover,
+.number:hover,
+.character:hover {
+    background-color: #4c6ba891;
+}
+
+.thechng {
+    background-color: #38BDF8;
+    color: var(--background-color);
+}
+
+.capital {
+    left: 60px;
+}
+
+.number {
+    left: 145px;
+}
+
+.character {
+    left: 230px;
+}
+
+.concon {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    top: 230px;
+    left: 320px;
+    position: absolute;
+}
+
+select {
+    background-color: #fff;
+    border: thin solid #111;
+    border-radius: 4px;
+    font: inherit;
+    line-height: 1.5em;
+    height: 100%;
+    padding: 0.5em 3.5em 0.5em 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-bottom: 35px
+}
+
+select.classic {
+    --main-color: #F0EBE3;
+    --sec-color: #E4DCCF;
+    --fourth-color: #576F72;
+    background-image: linear-gradient(45deg, transparent 50%, var(--main-color) 50%), linear-gradient(135deg, var(--sec-color) 50%, transparent 50%), linear-gradient(to right, var(--fourth-color), var(--fourth-color));
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+select.classic:focus {
+    outline: 0;
+}
+
+.end {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 100px);
+    color: var(--line-color)
+}
+
+
+/* light mode btn*/
+
+.light_btn {
+    position: absolute;
+    left: 60%;
+    top: 120px;
+}
+
+@media only screen and (max-width: 720px) {
+    html,
+    body {
+        overflow-y: hidden;
+        overflow: hidden;
+    }
+    .light_btn {
+        left: 72%;
+    }
+    .card {
+        --width: 350px;
+        top: 90px;
+        width: var(--width);
+        height: 650px;
+    }
+    .heading {
+        top: 30px;
+        font-size: 30px;
+    }
+    .bio {
+        top: 125px;
+        font-size: 13px;
+    }
+    .geneBtn {
+        top: 185px;
+    }
+    .firstPass {
+        left: 4rem;
+    }
+    .secPass {
+        top: 420px;
+        left: 4rem;
+    }
+    .copyBtn {
+        top: 262px;
+        right: 15px;
+    }
+    .secCopyBtn {
+        top: 308px;
+        right: 15px;
+    }
+    .sign {
+        top: calc(100% - 280px);
+    }
+    .capital {
+        top: 250px;
+    }
+    .number {
+        top: 250px;
+    }
+    .character {
+        top: 250px;
+    }
+    .line {
+        width: 90px;
+        top: 330px;
+    }
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 90px;
+        left: 205px;
+        border: 1px solid var(--line-color);
+    }
+    .concon {
+        top: 310px;
+        left: 75px;
+    }
+    .end {
+        position: absolute;
+        bottom: 0px;
+        left: calc(50% - 100px);
+    }
+}
+
+@media (min-width: 500px) and (max-width: 720px) {
+    .light_btn {
+        left: 60%;
+    }
+}
+
+@media (max-width: 390px) {
+    .card {
+        top: 10px;
+    }
+    .light_btn {
+        top: 5%;
+    }
+}
